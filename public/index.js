@@ -46,4 +46,5 @@ console.log(childSnapshot.val());
 var tName = childSnapshot.val().name;
 var trole = childSnapshot.val().role;
 var trate = childSnapshot.val().rate;
-var tstartDate = chilstartDateal().startDate;
+var tstartDate = childstartDate().startDate;
+});
