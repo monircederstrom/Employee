@@ -25,24 +25,24 @@ rate: rate
 employeeData.ref().push(newEmployee);
 // confirm in console
 console.log(newEmployee.name);
-console.log(newEMployee.role);
-console.log(newEMployee.startDate);
-console.log(newEMployee.rate);
+console.log(newEmployee.role);
+console.log(newEmployee.startDate);
+console.log(newEmployee.rate);
 // Alert
 alert("New Employee Successfully Created");
 // Clears all of the text-boxes
 $("#name-input").val("");
 $("#role-input").val("");
-$("#first-input").val("");
+$("#startDate-input").val("");
 $("#rate-input").val("");
 // Determine when the next EMployee arrives.
 return Employee;
 });
 //  Firebase event for adding EMployees to the database 
 //  and a row in the html when a user adds an entry
-EMployeeData.ref().on("child_added", function(childSnapshot, prevChildKey) {
+employeeData.ref().on("child_added", function(childSnapshot, prevChildKey) {
 console.log(childSnapshot.val());
-// EMployee app variables
+// employee app variables
 var tName = childSnapshot.val().name;
 var trole = childSnapshot.val().role;
 var trate = childSnapshot.val().rate;
