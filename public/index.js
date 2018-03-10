@@ -8,7 +8,7 @@ var config = {
 };
 firebase.initializeApp(config);
 var employeeData = firebase.database();
-$("#add-employee-btn").on("click", function() {
+$("#add").on("click", function() {
 // Grabs user input
 var employeeName = $("#name-input").val().trim();
 var role = $("#role-input").val().trim();
