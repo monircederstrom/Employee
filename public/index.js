@@ -8,9 +8,14 @@ var config = {
    messagingSenderId: "837111990737",
 }
 firebase.initializeApp(config);
+<<<<<<< HEAD
 var database = firebase.database();
 $("#add-employee-btn").on("click", function() {
 	event.preventDefault();
+=======
+var employeeData = firebase.database();
+$("#add").on("click", function() {
+>>>>>>> f4b6290aa1049eb7b1925b7dd82b65f1f921b32f
 // Grabs user input
 var employeeName = $("#name").val().trim();
 var role = $("#role").val().trim();
@@ -28,6 +33,7 @@ database.ref().push(newEmployee);
 // confirm in console
 console.log(newEmployee.name);
 console.log(newEmployee.role);
+<<<<<<< HEAD
 console.log(newEMployee.start);
 console.log(newEMployee.rate);
 // Alert
@@ -37,17 +43,33 @@ $("#name").val("");
 $("#role").val("");
 $("#startdate").val("");
 $("#rate").val("");
+=======
+console.log(newEmployee.startDate);
+console.log(newEmployee.rate);
+// Alert
+alert("New Employee Successfully Created");
+// Clears all of the text-boxes
+$("#name-input").val("");
+$("#role-input").val("");
+$("#startDate-input").val("");
+$("#rate-input").val("");
+>>>>>>> f4b6290aa1049eb7b1925b7dd82b65f1f921b32f
 // Determine when the next EMployee arrives.
 });
 
 //  Firebase event for adding EMployees to the database 
 //  and a row in the html when a user adds an entry
+<<<<<<< HEAD
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+=======
+employeeData.ref().on("child_added", function(childSnapshot, prevChildKey) {
+>>>>>>> f4b6290aa1049eb7b1925b7dd82b65f1f921b32f
 console.log(childSnapshot.val());
-// EMployee app variables
+// employee app variables
 var tName = childSnapshot.val().name;
 var trole = childSnapshot.val().role;
 var trate = childSnapshot.val().rate;
+<<<<<<< HEAD
 var tstartDate = childSnapshot.val().start;
 
 console.log(tName);
@@ -66,3 +88,7 @@ console.log(billed);
 $("#table > tbody").append("<tr><td>" + tName + "</td><td>" + trole + "</td><td>" +
   employeeStart + "</td><td>" + months + "</td><td>" + trate + "</td><td>" + billed + "</td></tr>");
 });
+=======
+var tstartDate = childstartDate().startDate;
+});
+>>>>>>> f4b6290aa1049eb7b1925b7dd82b65f1f921b32f
